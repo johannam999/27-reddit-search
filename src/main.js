@@ -1,7 +1,6 @@
 'use strict';
 
 import React from 'react';
-// import ReactDom from 'react-dom'; this can be done like below
 import { render as reactDomRender } from 'react-dom'; 
 import superagent from 'superagent';
 import '../style/main.scss';
@@ -30,7 +29,6 @@ class RedditSearchForm extends React.Component {
   handleSubmit(event) { // on click
     event.preventDefault();
     this.props.searchSelect(this.state.searchFormBoard); 
-    // this is a function passed later, htis call for a function, real arguments gets passed in render()
   }
   render() {
     return (
@@ -42,12 +40,6 @@ class RedditSearchForm extends React.Component {
           placeholder='searching for results'
           value={this.state.searchFormBoard}
           onChange={this.handleSearchChange}/>
-          {/* <input
-          type='number'
-          name='limit'
-          placeholder='number limit'
-          value={this.state.limit}
-          onChange={this.handleLimitChange}/> */}
           </form>  
     
     );
@@ -75,7 +67,6 @@ class App extends React.Component {
           searchFormBoard: response.body,
 
         });
-        // console.log(this.state.searchFormBoard);
       })
       .catch(() => {
         this.setState({
@@ -83,9 +74,8 @@ class App extends React.Component {
         });
       });
   }
-// this is the one to extract: you'll access the argument via this.props.listProperty
+
   renderSearchList(list) {
-    console.log(list);
     if (list !== null) {
       return (
       <ul>
@@ -95,7 +85,6 @@ class App extends React.Component {
             <a href={item.data.url}>{item.data.title}
             <p>{item.data.ups}</p>
             </a>
-            
             </li>
           );
         })}
@@ -110,7 +99,6 @@ class App extends React.Component {
       <section>
         <h1>Search the topic </h1>
         <RedditSearchForm searchSelect={this.searchSelect}/>
-        {/* <listComponent listProperty = this.state.searchFormBoard /> */}
         {
           this.state.searchError ?
             <div>

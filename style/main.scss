@@ -1,0 +1,15 @@
+$background-color: #949090;
+$font-color: #FFFFFF; // naming: primary colors, secondary cols, highlight
+$error: #ff0000;
+
+html, body {
+  background: $background-color;
+}
+
+p,h1,h2,ul {
+  color: $font-color;
+}
+
+.error {
+  boarder-color:$error;
+}

@@ -1,50 +1,29 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 27: Reddit Search Engine
-===
+# 27-reddit-search
+**Author**: Joanna Coll
+**Version**: 1.0.0 
 
-## Submission Instructions
-  * Work in a fork of this repository
-  * Work in a branch on your fork
-  * Submit a pull request to this repository
-  * Submit a link to your pull request on canvas
-  * Submit a question, observation, and how long you spent on canvas  
-  
-## Learning Objectives  
-* Students will learn to manage controlled inputs
-* Students will learn to pass data from parent to child through props
+## Overview
 
-## Requirements  
-#### Feature Tasks 
-Create the following components and structure them according to the following diagram 
-```
-App
-  SearchForm
-  SearchResultList
-``` 
-###### App Component
-* should contain all of the **application state** 
-* should contain methods for modifying the application state
-* the state should have a topics array for holding the results of the search
+This app uses a search bar and user input as a form to browse reddit api and return a chosen request.  The number of results displaying is predefined and limited. We display results in the form of anchor tags that link to reddit page.
 
-###### SearchForm Component
-* should contain a text input for the user to supply a reddit board to look up
-* should contain a number input for the user to limit the number of results to return 
-  * the number must be more than 0 and less than 100
-  * `onSubmit` the form should make a request to reddit 
-  * it should make a get request to `http://reddit.com/r/${searchFormBoard}.json?limit=${searchFormLimit}`
-  * on success it should pass the results to the application state
-  * on failure it should add a class to the form called error and turn the form's inputs borders red
+## Getting Started
 
-###### SearchResultList Component
-* Should inherit all search results through props
-* This component does not need to have its own state
-* If there are topics in the application state it should display an unordered list 
-* Each list item in the unordered list should contain the following
-  * an anchor tag with a href to the topic.url 
-    * inside the anchor a heading tag with the topic.title 
-    * inside the anchor a p tag with the number of topic.ups 
+1. To start you need to install all the necessary dependencies and create all the directories.
+2. Start with building webpack.common.js and webpack.dev.js files.
+3. Create  necessary components: 
+RedditSearchForm, App and RenderSearchList
+4. Render all the components into HTML.
+5. Change scss file accordingly.
 
-#### Test
-* no testing today
 
-#### Documentation  
-Write a description of the project in your README.md
+
+## Architecture
+JavaScript, Node.js, Airbnb package, babel, Sass, React, Reddit, Superagent, other dependencies
+
+## Change Log
+
+05-12-2018 7:00pm - The application is almost finished.
+05-12-2018 9:30pm - Finished writing README.md
+
+
+## Credits and Collaborations

@@ -15,7 +15,7 @@ webpackConfig.output = {
 
 webpackConfig.plugins = [
   new HTMLWebpackPlugin({
-    title: 'Pokemon app',
+    title: 'Reddit Search',
   }),
 ];
 

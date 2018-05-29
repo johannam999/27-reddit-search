@@ -30,6 +30,7 @@ webpackDevConfig.module.rules = [
       'style-loader', 
       'css-loader', 
       'sass-loader', 
+    ],
   },
 ];
 
